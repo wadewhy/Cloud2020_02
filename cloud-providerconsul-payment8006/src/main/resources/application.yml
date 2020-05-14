@@ -1,0 +1,14 @@
+#consul服务端口号
+server:
+  port: 8006
+spring:
+  application:
+    name: consul-provider-payment
+#consul注册中心地址
+  cloud:
+    consul:
+      #这里我在windows环境下
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
